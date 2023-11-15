@@ -11,16 +11,6 @@
 
 API em Java (Spring Boot) com CRUD simulando o estacionamento de um condomínio, com suas regras e validações básicas, apresentada no tutorial [Spring Boot | Curso Completo 2022](https://www.youtube.com/watch?v=LXRU-Z36GEU&t=1594s).
 
-Preparação Ambiente:
-- JDK 11
-- Maven
-- Postman
-- PgAdmin (Postgres)
-- IDE (IntelliJ, STS, Eclipse, etc)
-
-
-
-
 ## Funcionalidades e requisitos da API
 
 **Tecnologias e linguagens de programação**
