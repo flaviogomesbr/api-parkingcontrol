@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "197ad4a8-18c3-40c6-9bbf-98eb3f5273c4",
+		"name": "00_MELI_JavaSpringBoot_API_parking-Spot",
+		"description": "API desenvolvida a partir do tutorial [https://www.youtube.com/watch?v=LXRU-Z36GEU&amp;t=1594s,](https://www.youtube.com/watch?v=LXRU-Z36GEU&t=1594s,) que abordou tanto a parte teórica quanto prática do Spring, desde a base do Spring Framework, Inversão de Controle, Injeção de Dependências, Beans, definição Spring Boot e também a construção de um projeto Spring Boot (Parking Control API) do zero, com projetos como Spring MVC, Spring Data JPA e Spring Validation para a criação de uma API com Pageable, métodos getAll, getOne, post, delete, update e Global Custom Date.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13702584"
+	},
+	"item": [
+		{
+			"name": "GET ALL Parking Spots",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking-spot?page=0&size=5&sort=registrationDate,DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-spot"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "sort",
+							"value": "registrationDate,DESC"
+						},
+						{
+							"key": "Key",
+							"value": "Value",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parkingSpotNumber\": \"02AB\",\n    \"licensePlateCar\": \"RRS8560\",\n    \"brandCar\": \"bmw\",\n    \"modelCar\": \"x1\",\n    \"colorCar\": \"blue\",\n    \"responsibleName\": \"Maria\",\n    \"apartment\": \"100\",\n    \"block\": \"B\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/parking-spot"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/parking-spot/22426937-ad23-40fe-816a-647012191922"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/parking-spot/22426937-ad23-40fe-816a-6470121919b4"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parkingSpotNumber\": \"110A\",\n    \"licensePlateCar\": \"TTT8597\",\n    \"brandCar\": \"ferrari\",\n    \"modelCar\": \"senna-model\",\n    \"colorCar\": \"blue\",\n    \"responsibleName\": \"Pedro Gomes\",\n    \"apartment\": \"110\",\n    \"block\": \"A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/parking-spot/a319d175-6606-44de-be94-f6bd9ab383a7"
+			},
+			"response": []
+		}
+	]
+}
